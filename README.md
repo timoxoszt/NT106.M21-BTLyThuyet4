@@ -15,6 +15,6 @@ Thông tin nhóm:
 
 Nhiệm vụ:
 
-Tiến: bài 10
+Tiến, Duy: bài 10
 
-Phong: bài 1
+Phong, Nhật Anh: bài 1
