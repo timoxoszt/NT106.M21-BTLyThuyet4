@@ -16,5 +16,17 @@ namespace TCP_Chat
         {
             InitializeComponent();
         }
+
+        private void btnClient_Click(object sender, EventArgs e)
+        {
+            Client frmClient = new Client();
+            frmClient.Show();
+        }
+
+        private void btnServer_Click(object sender, EventArgs e)
+        {
+            Server frmServer = new Server();
+            frmServer.Show();
+        }
     }
 }

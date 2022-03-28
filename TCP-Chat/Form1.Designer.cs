@@ -53,6 +53,7 @@ namespace TCP_Chat
             this.btnClient.TabIndex = 1;
             this.btnClient.Text = "Client";
             this.btnClient.UseVisualStyleBackColor = true;
+            this.btnClient.Click += new System.EventHandler(this.btnClient_Click);
             // 
             // btnServer
             // 
@@ -63,6 +64,7 @@ namespace TCP_Chat
             this.btnServer.TabIndex = 2;
             this.btnServer.Text = "Server";
             this.btnServer.UseVisualStyleBackColor = true;
+            this.btnServer.Click += new System.EventHandler(this.btnServer_Click);
             // 
             // Form1
             // 

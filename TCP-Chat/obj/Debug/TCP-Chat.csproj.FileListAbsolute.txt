@@ -1,0 +1,12 @@
+D:\Baitap\LapTrinhMangCanBan\Code\BTLyThuyet4\TCP-Chat\bin\Debug\TCP-Chat.exe.config
+D:\Baitap\LapTrinhMangCanBan\Code\BTLyThuyet4\TCP-Chat\bin\Debug\TCP-Chat.exe
+D:\Baitap\LapTrinhMangCanBan\Code\BTLyThuyet4\TCP-Chat\bin\Debug\TCP-Chat.pdb
+D:\Baitap\LapTrinhMangCanBan\Code\BTLyThuyet4\TCP-Chat\obj\Debug\TCP-Chat.csproj.AssemblyReference.cache
+D:\Baitap\LapTrinhMangCanBan\Code\BTLyThuyet4\TCP-Chat\obj\Debug\TCP_Chat.Client.resources
+D:\Baitap\LapTrinhMangCanBan\Code\BTLyThuyet4\TCP-Chat\obj\Debug\TCP_Chat.Form1.resources
+D:\Baitap\LapTrinhMangCanBan\Code\BTLyThuyet4\TCP-Chat\obj\Debug\TCP_Chat.Properties.Resources.resources
+D:\Baitap\LapTrinhMangCanBan\Code\BTLyThuyet4\TCP-Chat\obj\Debug\TCP_Chat.Server.resources
+D:\Baitap\LapTrinhMangCanBan\Code\BTLyThuyet4\TCP-Chat\obj\Debug\TCP-Chat.csproj.GenerateResource.cache
+D:\Baitap\LapTrinhMangCanBan\Code\BTLyThuyet4\TCP-Chat\obj\Debug\TCP-Chat.csproj.CoreCompileInputs.cache
+D:\Baitap\LapTrinhMangCanBan\Code\BTLyThuyet4\TCP-Chat\obj\Debug\TCP-Chat.exe
+D:\Baitap\LapTrinhMangCanBan\Code\BTLyThuyet4\TCP-Chat\obj\Debug\TCP-Chat.pdb
