@@ -95,6 +95,7 @@
             this.btnSend.TabIndex = 6;
             this.btnSend.Text = "Send";
             this.btnSend.UseVisualStyleBackColor = true;
+            this.btnSend.Click += new System.EventHandler(this.btnSend_Click);
             // 
             // btnClose
             // 
@@ -104,6 +105,7 @@
             this.btnClose.TabIndex = 7;
             this.btnClose.Text = "Close App";
             this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // btnConnect
             // 
@@ -113,6 +115,7 @@
             this.btnConnect.TabIndex = 8;
             this.btnConnect.Text = "Connect";
             this.btnConnect.UseVisualStyleBackColor = true;
+            this.btnConnect.Click += new System.EventHandler(this.btnConnect_Click);
             // 
             // UDP_Caller
             // 
