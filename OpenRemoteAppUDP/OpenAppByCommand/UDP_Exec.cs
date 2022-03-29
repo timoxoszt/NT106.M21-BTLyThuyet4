@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Net;
 using System.Net.Sockets;
+using System.Diagnostics;
 
 //làm ơn nhớ đây là server
 namespace OpenAppByCommand
@@ -24,6 +25,19 @@ namespace OpenAppByCommand
         {
             InitializeComponent();
         }
+        public string readCommand(string s)
+        {
+            if (s.StartsWith("OPEN#") == true)
+            {
+                string[] res = { };
+                for (int i = 0;i<s.Length;i++)
+                {
+                    res = s.Split('#');
+                }
+                return res[1];
+            }
+            return "";
+        }
 
         private void btnStart_Click(object sender, EventArgs e)
         {
@@ -31,13 +45,26 @@ namespace OpenAppByCommand
             serverPort = int.Parse(portBox.Text);
             serverEP = new IPEndPoint(serverIP, serverPort);
             socket = new Socket(SocketType.Dgram, ProtocolType.Udp);
+        }
+
+        private void btnBind_Click(object sender, EventArgs e)
+        {
             socket.Bind(serverEP);
             int size = 1024;
             byte[] rcvBuffer = new byte[size];
-            EndPoint remoteEndPoint = new IPEndPoint(IPAddress.Any, 0);
-            var length = socket.ReceiveFrom(rcvBuffer, ref remoteEndPoint);
+            EndPoint remoteEP = (EndPoint)serverEP;
+            var length = socket.ReceiveFrom(rcvBuffer,0, ref remoteEP);
             var rcvText = Encoding.ASCII.GetString(rcvBuffer, 0, length);
-            nameBox.Text = rcvText.Substring(5, rcvText.Length);
+            nameBox.Text = rcvText;
+        }
+
+        private void btnOpen_Click(object sender, EventArgs e)
+        {
+            Process ExternalProcess = new Process();
+            ExternalProcess.StartInfo.FileName = readCommand(nameBox.Text);
+            ExternalProcess.StartInfo.WindowStyle = ProcessWindowStyle.Maximized;
+            ExternalProcess.Start();
+            ExternalProcess.WaitForExit();
         }
     }
 }

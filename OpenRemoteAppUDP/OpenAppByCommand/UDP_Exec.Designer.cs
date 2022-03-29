@@ -38,6 +38,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.btnStop = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
+            this.btnBind = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // ipBox
@@ -97,6 +98,7 @@
             this.btnOpen.TabIndex = 6;
             this.btnOpen.Text = "Open";
             this.btnOpen.UseVisualStyleBackColor = true;
+            this.btnOpen.Click += new System.EventHandler(this.btnOpen_Click);
             // 
             // label3
             // 
@@ -125,11 +127,22 @@
             this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = true;
             // 
+            // btnBind
+            // 
+            this.btnBind.Location = new System.Drawing.Point(377, 89);
+            this.btnBind.Name = "btnBind";
+            this.btnBind.Size = new System.Drawing.Size(75, 23);
+            this.btnBind.TabIndex = 10;
+            this.btnBind.Text = "Bind";
+            this.btnBind.UseVisualStyleBackColor = true;
+            this.btnBind.Click += new System.EventHandler(this.btnBind_Click);
+            // 
             // UDP_Exec
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(484, 123);
+            this.Controls.Add(this.btnBind);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnStop);
             this.Controls.Add(this.label3);
@@ -159,6 +172,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnStop;
         private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.Button btnBind;
     }
 }
 

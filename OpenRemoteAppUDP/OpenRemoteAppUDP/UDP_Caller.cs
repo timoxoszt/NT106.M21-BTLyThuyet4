@@ -30,12 +30,12 @@ namespace OpenRemoteAppUDP
             serverIP = IPAddress.Parse(ipBox.Text);
             serverPort = int.Parse(portBox.Text);
             serverEP = new IPEndPoint(serverIP, serverPort);
+            socket = new Socket(SocketType.Dgram, ProtocolType.Udp);
         }
 
         private void btnSend_Click(object sender, EventArgs e)
         {
             string sndText = "OPEN#" + sendBox.Text;
-            socket = new Socket(SocketType.Dgram, ProtocolType.Udp);
             var sndBuffer = encode.GetBytes(sndText);
             socket.SendTo(sndBuffer, serverEP);
         }
