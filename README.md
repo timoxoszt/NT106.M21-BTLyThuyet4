@@ -11,7 +11,6 @@ Thông tin nhóm:
 
 4. Nguyễn Đàm Nhật Anh - 20520880
 
-5. Trần Cẫm Sơn Hà - 20521272
 
 Nhiệm vụ:
 
