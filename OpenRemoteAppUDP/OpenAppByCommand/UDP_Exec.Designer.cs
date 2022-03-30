@@ -32,20 +32,20 @@
             this.label1 = new System.Windows.Forms.Label();
             this.portBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.nameBox = new System.Windows.Forms.TextBox();
-            this.btnOpen = new System.Windows.Forms.Button();
+            this.commandBox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.btnStop = new System.Windows.Forms.Button();
-            this.btnClose = new System.Windows.Forms.Button();
             this.btnBind = new System.Windows.Forms.Button();
             this.btnListen = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // ipBox
             // 
-            this.ipBox.Location = new System.Drawing.Point(53, 9);
+            this.ipBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.ipBox.Location = new System.Drawing.Point(73, 9);
             this.ipBox.Name = "ipBox";
-            this.ipBox.Size = new System.Drawing.Size(100, 20);
+            this.ipBox.ReadOnly = true;
+            this.ipBox.Size = new System.Drawing.Size(100, 13);
             this.ipBox.TabIndex = 0;
             // 
             // label1
@@ -59,9 +59,11 @@
             // 
             // portBox
             // 
-            this.portBox.Location = new System.Drawing.Point(53, 35);
+            this.portBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.portBox.Location = new System.Drawing.Point(73, 35);
             this.portBox.Name = "portBox";
-            this.portBox.Size = new System.Drawing.Size(100, 20);
+            this.portBox.ReadOnly = true;
+            this.portBox.Size = new System.Drawing.Size(100, 13);
             this.portBox.TabIndex = 2;
             // 
             // label2
@@ -73,35 +75,27 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "Port:";
             // 
-            // nameBox
+            // commandBox
             // 
-            this.nameBox.Location = new System.Drawing.Point(53, 62);
-            this.nameBox.Name = "nameBox";
-            this.nameBox.Size = new System.Drawing.Size(399, 20);
-            this.nameBox.TabIndex = 4;
-            // 
-            // btnOpen
-            // 
-            this.btnOpen.Location = new System.Drawing.Point(134, 89);
-            this.btnOpen.Name = "btnOpen";
-            this.btnOpen.Size = new System.Drawing.Size(75, 23);
-            this.btnOpen.TabIndex = 6;
-            this.btnOpen.Text = "Open";
-            this.btnOpen.UseVisualStyleBackColor = true;
-            this.btnOpen.Click += new System.EventHandler(this.btnOpen_Click);
+            this.commandBox.Location = new System.Drawing.Point(73, 61);
+            this.commandBox.Name = "commandBox";
+            this.commandBox.ReadOnly = true;
+            this.commandBox.Size = new System.Drawing.Size(237, 20);
+            this.commandBox.TabIndex = 4;
+            this.commandBox.TextChanged += new System.EventHandler(this.commandBox_TextChanged);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 65);
+            this.label3.Location = new System.Drawing.Point(12, 64);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(26, 13);
+            this.label3.Size = new System.Drawing.Size(57, 13);
             this.label3.TabIndex = 7;
-            this.label3.Text = "File:";
+            this.label3.Text = "Command:";
             // 
             // btnStop
             // 
-            this.btnStop.Location = new System.Drawing.Point(296, 89);
+            this.btnStop.Location = new System.Drawing.Point(154, 88);
             this.btnStop.Name = "btnStop";
             this.btnStop.Size = new System.Drawing.Size(75, 23);
             this.btnStop.TabIndex = 8;
@@ -109,19 +103,9 @@
             this.btnStop.UseVisualStyleBackColor = true;
             this.btnStop.Click += new System.EventHandler(this.btnStop_Click);
             // 
-            // btnClose
-            // 
-            this.btnClose.Location = new System.Drawing.Point(215, 89);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(75, 23);
-            this.btnClose.TabIndex = 9;
-            this.btnClose.Text = "Close";
-            this.btnClose.UseVisualStyleBackColor = true;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
-            // 
             // btnBind
             // 
-            this.btnBind.Location = new System.Drawing.Point(377, 89);
+            this.btnBind.Location = new System.Drawing.Point(73, 88);
             this.btnBind.Name = "btnBind";
             this.btnBind.Size = new System.Drawing.Size(75, 23);
             this.btnBind.TabIndex = 10;
@@ -131,7 +115,7 @@
             // 
             // btnListen
             // 
-            this.btnListen.Location = new System.Drawing.Point(53, 88);
+            this.btnListen.Location = new System.Drawing.Point(235, 87);
             this.btnListen.Name = "btnListen";
             this.btnListen.Size = new System.Drawing.Size(75, 23);
             this.btnListen.TabIndex = 11;
@@ -143,20 +127,18 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(484, 123);
+            this.ClientSize = new System.Drawing.Size(326, 123);
             this.Controls.Add(this.btnListen);
             this.Controls.Add(this.btnBind);
-            this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnStop);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.btnOpen);
-            this.Controls.Add(this.nameBox);
+            this.Controls.Add(this.commandBox);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.portBox);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.ipBox);
             this.Name = "UDP_Exec";
-            this.Text = "Exec";
+            this.Text = "Execute";
             this.Load += new System.EventHandler(this.UDP_Exec_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -169,11 +151,9 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox portBox;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox nameBox;
-        private System.Windows.Forms.Button btnOpen;
+        private System.Windows.Forms.TextBox commandBox;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnStop;
-        private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Button btnBind;
         private System.Windows.Forms.Button btnListen;
     }

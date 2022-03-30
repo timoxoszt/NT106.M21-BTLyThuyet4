@@ -28,39 +28,18 @@ namespace OpenAppByCommand
         }
         public string readCommand(string s)
         {
-            if (s.StartsWith("OPEN#") == true)
+            string[] res = { };
+            for (int i = 0; i < s.Length; i++)
             {
-                string[] res = { };
-                for (int i = 0;i<s.Length;i++)
-                {
-                    res = s.Split('#');
-                }
-                return res[1];
+                res = s.Split('#');
             }
-            return "";
+            return res[1];
         }
 
         private void btnBind_Click(object sender, EventArgs e)
         {
             socket.Bind(serverEP);
         }
-
-        private void btnOpen_Click(object sender, EventArgs e)
-        {
-            externalProcess = new Process();
-            externalProcess.StartInfo.FileName = readCommand(nameBox.Text);
-            externalProcess.StartInfo.WindowStyle = ProcessWindowStyle.Maximized;
-            externalProcess.Start();
-        }
-
-        private void btnClose_Click(object sender, EventArgs e)
-        {
-            if (nameBox.Text == "CLOSEAPP")
-            {
-                externalProcess.Kill();
-            }
-        }
-
         private void btnStop_Click(object sender, EventArgs e)
         {
             socket.Close();
@@ -87,7 +66,25 @@ namespace OpenAppByCommand
             EndPoint remoteEP = (EndPoint)serverEP;
             var length = socket.ReceiveFrom(rcvBuffer, 0, ref remoteEP);
             var rcvText = Encoding.ASCII.GetString(rcvBuffer, 0, length);
-            nameBox.Text = rcvText;
+            commandBox.Text = rcvText;
+        }
+
+        private void commandBox_TextChanged(object sender, EventArgs e)
+        {
+            if (commandBox.Text.StartsWith("OPEN#") == true)
+            {
+                externalProcess = new Process();
+                externalProcess.StartInfo.FileName = readCommand(commandBox.Text);
+                externalProcess.Start();
+            }
+            else if (commandBox.Text == "CLOSEAPP")
+            {
+                externalProcess.Kill();
+            }
+            else
+            {
+                MessageBox.Show("Vui lòng nhập đúng cú pháp");
+            }
         }
     }
 }

@@ -9,3 +9,14 @@ C:\Users\P\Desktop\BTLTB4\OpenRemoteAppUDP\OpenAppByCommand\obj\Debug\OpenAppByC
 C:\Users\P\Desktop\BTLTB4\OpenRemoteAppUDP\OpenAppByCommand\obj\Debug\OpenAppByCommand.csproj.CoreCompileInputs.cache
 C:\Users\P\Desktop\BTLTB4\OpenRemoteAppUDP\OpenAppByCommand\obj\Debug\OpenAppByCommand.exe
 C:\Users\P\Desktop\BTLTB4\OpenRemoteAppUDP\OpenAppByCommand\obj\Debug\OpenAppByCommand.pdb
+C:\Users\P\Desktop\New folder\OpenRemoteAppUDP\OpenAppByCommand\bin\Debug\OpenAppByCommand.exe.config
+C:\Users\P\Desktop\New folder\OpenRemoteAppUDP\OpenAppByCommand\bin\Debug\OpenAppByCommand.exe
+C:\Users\P\Desktop\New folder\OpenRemoteAppUDP\OpenAppByCommand\bin\Debug\OpenAppByCommand.pdb
+C:\Users\P\Desktop\New folder\OpenRemoteAppUDP\OpenAppByCommand\obj\Debug\OpenAppByCommand.csproj.AssemblyReference.cache
+C:\Users\P\Desktop\New folder\OpenRemoteAppUDP\OpenAppByCommand\obj\Debug\OpenAppByCommand.csproj.SuggestedBindingRedirects.cache
+C:\Users\P\Desktop\New folder\OpenRemoteAppUDP\OpenAppByCommand\obj\Debug\OpenAppByCommand.UDP_Exec.resources
+C:\Users\P\Desktop\New folder\OpenRemoteAppUDP\OpenAppByCommand\obj\Debug\OpenAppByCommand.Properties.Resources.resources
+C:\Users\P\Desktop\New folder\OpenRemoteAppUDP\OpenAppByCommand\obj\Debug\OpenAppByCommand.csproj.GenerateResource.cache
+C:\Users\P\Desktop\New folder\OpenRemoteAppUDP\OpenAppByCommand\obj\Debug\OpenAppByCommand.csproj.CoreCompileInputs.cache
+C:\Users\P\Desktop\New folder\OpenRemoteAppUDP\OpenAppByCommand\obj\Debug\OpenAppByCommand.exe
+C:\Users\P\Desktop\New folder\OpenRemoteAppUDP\OpenAppByCommand\obj\Debug\OpenAppByCommand.pdb
