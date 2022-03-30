@@ -21,6 +21,7 @@ namespace OpenAppByCommand
         private IPEndPoint serverEP;
         private Socket socket;
         string cmd;
+        Process externalProcess;
         public UDP_Exec()
         {
             InitializeComponent();
@@ -39,32 +40,54 @@ namespace OpenAppByCommand
             return "";
         }
 
-        private void btnStart_Click(object sender, EventArgs e)
+        private void btnBind_Click(object sender, EventArgs e)
         {
+            socket.Bind(serverEP);
+        }
+
+        private void btnOpen_Click(object sender, EventArgs e)
+        {
+            externalProcess = new Process();
+            externalProcess.StartInfo.FileName = readCommand(nameBox.Text);
+            externalProcess.StartInfo.WindowStyle = ProcessWindowStyle.Maximized;
+            externalProcess.Start();
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            if (nameBox.Text == "CLOSEAPP")
+            {
+                externalProcess.Kill();
+            }
+        }
+
+        private void btnStop_Click(object sender, EventArgs e)
+        {
+            socket.Close();
             serverIP = IPAddress.Parse(ipBox.Text);
             serverPort = int.Parse(portBox.Text);
             serverEP = new IPEndPoint(serverIP, serverPort);
             socket = new Socket(SocketType.Dgram, ProtocolType.Udp);
         }
 
-        private void btnBind_Click(object sender, EventArgs e)
+        private void UDP_Exec_Load(object sender, EventArgs e)
         {
-            socket.Bind(serverEP);
+            ipBox.Text = "127.0.0.1";
+            portBox.Text = "50";
+            serverIP = IPAddress.Parse(ipBox.Text);
+            serverPort = int.Parse(portBox.Text);
+            serverEP = new IPEndPoint(serverIP, serverPort);
+            socket = new Socket(SocketType.Dgram, ProtocolType.Udp);
+        }
+
+        private void btnListen_Click(object sender, EventArgs e)
+        {
             int size = 1024;
             byte[] rcvBuffer = new byte[size];
             EndPoint remoteEP = (EndPoint)serverEP;
-            var length = socket.ReceiveFrom(rcvBuffer,0, ref remoteEP);
+            var length = socket.ReceiveFrom(rcvBuffer, 0, ref remoteEP);
             var rcvText = Encoding.ASCII.GetString(rcvBuffer, 0, length);
             nameBox.Text = rcvText;
-        }
-
-        private void btnOpen_Click(object sender, EventArgs e)
-        {
-            Process ExternalProcess = new Process();
-            ExternalProcess.StartInfo.FileName = readCommand(nameBox.Text);
-            ExternalProcess.StartInfo.WindowStyle = ProcessWindowStyle.Maximized;
-            ExternalProcess.Start();
-            ExternalProcess.WaitForExit();
         }
     }
 }

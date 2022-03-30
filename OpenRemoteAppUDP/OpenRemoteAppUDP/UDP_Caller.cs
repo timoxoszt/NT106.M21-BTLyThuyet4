@@ -35,9 +35,18 @@ namespace OpenRemoteAppUDP
 
         private void btnSend_Click(object sender, EventArgs e)
         {
-            string sndText = "OPEN#" + sendBox.Text;
-            var sndBuffer = encode.GetBytes(sndText);
-            socket.SendTo(sndBuffer, serverEP);
+            if (sendBox.Text != "CLOSEAPP")
+            {
+                string sndText = "OPEN#" + sendBox.Text;
+                var sndBuffer = encode.GetBytes(sndText);
+                socket.SendTo(sndBuffer, serverEP);
+            }
+            else
+            {
+                string sndText = sendBox.Text;
+                var sndBuffer = encode.GetBytes(sndText);
+                socket.SendTo(sndBuffer, serverEP);
+            }
         }
 
         private void btnClose_Click(object sender, EventArgs e)

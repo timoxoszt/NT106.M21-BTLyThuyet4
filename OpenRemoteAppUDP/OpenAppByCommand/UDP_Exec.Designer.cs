@@ -33,12 +33,12 @@
             this.portBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.nameBox = new System.Windows.Forms.TextBox();
-            this.btnStart = new System.Windows.Forms.Button();
             this.btnOpen = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.btnStop = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
             this.btnBind = new System.Windows.Forms.Button();
+            this.btnListen = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // ipBox
@@ -80,16 +80,6 @@
             this.nameBox.Size = new System.Drawing.Size(399, 20);
             this.nameBox.TabIndex = 4;
             // 
-            // btnStart
-            // 
-            this.btnStart.Location = new System.Drawing.Point(53, 89);
-            this.btnStart.Name = "btnStart";
-            this.btnStart.Size = new System.Drawing.Size(75, 23);
-            this.btnStart.TabIndex = 5;
-            this.btnStart.Text = "Start";
-            this.btnStart.UseVisualStyleBackColor = true;
-            this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
-            // 
             // btnOpen
             // 
             this.btnOpen.Location = new System.Drawing.Point(134, 89);
@@ -117,6 +107,7 @@
             this.btnStop.TabIndex = 8;
             this.btnStop.Text = "Stop";
             this.btnStop.UseVisualStyleBackColor = true;
+            this.btnStop.Click += new System.EventHandler(this.btnStop_Click);
             // 
             // btnClose
             // 
@@ -126,6 +117,7 @@
             this.btnClose.TabIndex = 9;
             this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // btnBind
             // 
@@ -137,17 +129,27 @@
             this.btnBind.UseVisualStyleBackColor = true;
             this.btnBind.Click += new System.EventHandler(this.btnBind_Click);
             // 
+            // btnListen
+            // 
+            this.btnListen.Location = new System.Drawing.Point(53, 88);
+            this.btnListen.Name = "btnListen";
+            this.btnListen.Size = new System.Drawing.Size(75, 23);
+            this.btnListen.TabIndex = 11;
+            this.btnListen.Text = "Listen";
+            this.btnListen.UseVisualStyleBackColor = true;
+            this.btnListen.Click += new System.EventHandler(this.btnListen_Click);
+            // 
             // UDP_Exec
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(484, 123);
+            this.Controls.Add(this.btnListen);
             this.Controls.Add(this.btnBind);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnStop);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btnOpen);
-            this.Controls.Add(this.btnStart);
             this.Controls.Add(this.nameBox);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.portBox);
@@ -155,6 +157,7 @@
             this.Controls.Add(this.ipBox);
             this.Name = "UDP_Exec";
             this.Text = "Exec";
+            this.Load += new System.EventHandler(this.UDP_Exec_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -167,12 +170,12 @@
         private System.Windows.Forms.TextBox portBox;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox nameBox;
-        private System.Windows.Forms.Button btnStart;
         private System.Windows.Forms.Button btnOpen;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnStop;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Button btnBind;
+        private System.Windows.Forms.Button btnListen;
     }
 }
 
