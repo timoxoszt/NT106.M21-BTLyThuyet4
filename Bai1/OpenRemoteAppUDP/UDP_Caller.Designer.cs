@@ -63,29 +63,29 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(36, 15);
+            this.label1.Location = new System.Drawing.Point(43, 15);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(61, 13);
+            this.label1.Size = new System.Drawing.Size(54, 13);
             this.label1.TabIndex = 3;
-            this.label1.Text = "IP Address:";
+            this.label1.Text = "Server IP:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(68, 42);
+            this.label2.Location = new System.Drawing.Point(34, 42);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(29, 13);
+            this.label2.Size = new System.Drawing.Size(63, 13);
             this.label2.TabIndex = 4;
-            this.label2.Text = "Port:";
+            this.label2.Text = "Server Port:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(30, 68);
+            this.label3.Location = new System.Drawing.Point(40, 68);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(67, 13);
+            this.label3.Size = new System.Drawing.Size(57, 13);
             this.label3.TabIndex = 5;
-            this.label3.Text = "App\'s Name:";
+            this.label3.Text = "Command:";
             // 
             // btnSend
             // 

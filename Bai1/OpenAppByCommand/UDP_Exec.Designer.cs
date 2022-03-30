@@ -35,17 +35,15 @@
             this.commandBox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.btnStop = new System.Windows.Forms.Button();
-            this.btnBind = new System.Windows.Forms.Button();
+            this.btnStart = new System.Windows.Forms.Button();
             this.btnListen = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // ipBox
             // 
-            this.ipBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.ipBox.Location = new System.Drawing.Point(73, 9);
             this.ipBox.Name = "ipBox";
-            this.ipBox.ReadOnly = true;
-            this.ipBox.Size = new System.Drawing.Size(100, 13);
+            this.ipBox.Size = new System.Drawing.Size(100, 20);
             this.ipBox.TabIndex = 0;
             // 
             // label1
@@ -59,11 +57,9 @@
             // 
             // portBox
             // 
-            this.portBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.portBox.Location = new System.Drawing.Point(73, 35);
             this.portBox.Name = "portBox";
-            this.portBox.ReadOnly = true;
-            this.portBox.Size = new System.Drawing.Size(100, 13);
+            this.portBox.Size = new System.Drawing.Size(100, 20);
             this.portBox.TabIndex = 2;
             // 
             // label2
@@ -103,15 +99,15 @@
             this.btnStop.UseVisualStyleBackColor = true;
             this.btnStop.Click += new System.EventHandler(this.btnStop_Click);
             // 
-            // btnBind
+            // btnStart
             // 
-            this.btnBind.Location = new System.Drawing.Point(73, 88);
-            this.btnBind.Name = "btnBind";
-            this.btnBind.Size = new System.Drawing.Size(75, 23);
-            this.btnBind.TabIndex = 10;
-            this.btnBind.Text = "Bind";
-            this.btnBind.UseVisualStyleBackColor = true;
-            this.btnBind.Click += new System.EventHandler(this.btnBind_Click);
+            this.btnStart.Location = new System.Drawing.Point(73, 88);
+            this.btnStart.Name = "btnStart";
+            this.btnStart.Size = new System.Drawing.Size(75, 23);
+            this.btnStart.TabIndex = 10;
+            this.btnStart.Text = "Start";
+            this.btnStart.UseVisualStyleBackColor = true;
+            this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
             // 
             // btnListen
             // 
@@ -129,7 +125,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(326, 123);
             this.Controls.Add(this.btnListen);
-            this.Controls.Add(this.btnBind);
+            this.Controls.Add(this.btnStart);
             this.Controls.Add(this.btnStop);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.commandBox);
@@ -139,7 +135,6 @@
             this.Controls.Add(this.ipBox);
             this.Name = "UDP_Exec";
             this.Text = "Execute";
-            this.Load += new System.EventHandler(this.UDP_Exec_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -154,7 +149,7 @@
         private System.Windows.Forms.TextBox commandBox;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnStop;
-        private System.Windows.Forms.Button btnBind;
+        private System.Windows.Forms.Button btnStart;
         private System.Windows.Forms.Button btnListen;
     }
 }

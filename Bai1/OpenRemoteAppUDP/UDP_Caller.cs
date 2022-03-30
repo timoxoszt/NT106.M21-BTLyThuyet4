@@ -27,6 +27,7 @@ namespace OpenRemoteAppUDP
 
         private void btnConnect_Click(object sender, EventArgs e)
         {
+            //kết nới tới socket đã được start
             serverIP = IPAddress.Parse(ipBox.Text);
             serverPort = int.Parse(portBox.Text);
             serverEP = new IPEndPoint(serverIP, serverPort);
@@ -35,6 +36,7 @@ namespace OpenRemoteAppUDP
 
         private void btnSend_Click(object sender, EventArgs e)
         {
+            //gửi dữ liệu
             string sndText = sendBox.Text;
             var sndBuffer = encode.GetBytes(sndText);
             socket.SendTo(sndBuffer, serverEP);
