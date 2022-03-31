@@ -28,23 +28,51 @@ namespace OpenRemoteAppUDP
         private void btnConnect_Click(object sender, EventArgs e)
         {
             //kết nới tới socket đã được start
-            serverIP = IPAddress.Parse(ipBox.Text);
-            serverPort = int.Parse(portBox.Text);
-            serverEP = new IPEndPoint(serverIP, serverPort);
-            socket = new Socket(SocketType.Dgram, ProtocolType.Udp);
+            try
+            {
+                serverIP = IPAddress.Parse(ipBox.Text);
+                serverPort = int.Parse(portBox.Text);
+                serverEP = new IPEndPoint(serverIP, serverPort);
+                socket = new Socket(SocketType.Dgram, ProtocolType.Udp);
+            }
+            catch (System.FormatException)
+            {
+                MessageBox.Show("Vui lòng nhập đúng định dạng IP");
+            }
         }
 
         private void btnSend_Click(object sender, EventArgs e)
         {
+            try
+            {
+                if (sendBox.Text.StartsWith("OPEN#") == true || sendBox.Text == "CLOSEAPP")
+                {
+                    string sndText = sendBox.Text;
+                    var sndBuffer = encode.GetBytes(sndText);
+                    socket.SendTo(sndBuffer, serverEP);
+                }
+                else
+                {
+                    MessageBox.Show("Vui lòng nhập đúng định dạng");
+                }
+            }
             //gửi dữ liệu
-            string sndText = sendBox.Text;
-            var sndBuffer = encode.GetBytes(sndText);
-            socket.SendTo(sndBuffer, serverEP);
+            catch (System.NullReferenceException)
+            {
+                MessageBox.Show("Vui lòng connect trước");
+            }
         }
 
         private void btnClose_Click(object sender, EventArgs e)
         {
-            socket.Close();
+            try
+            {
+                socket.Close();
+            }
+            catch (System.NullReferenceException)
+            {
+
+            }
         }
     }
 }
