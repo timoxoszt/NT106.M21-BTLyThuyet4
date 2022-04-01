@@ -1,0 +1,11 @@
+C:\Users\P\Desktop\CleanCode1\TCP_Chat\Server\bin\Debug\Server.exe.config
+C:\Users\P\Desktop\CleanCode1\TCP_Chat\Server\bin\Debug\Server.exe
+C:\Users\P\Desktop\CleanCode1\TCP_Chat\Server\bin\Debug\Server.pdb
+C:\Users\P\Desktop\CleanCode1\TCP_Chat\Server\obj\Debug\Server.csproj.AssemblyReference.cache
+C:\Users\P\Desktop\CleanCode1\TCP_Chat\Server\obj\Debug\Server.csproj.SuggestedBindingRedirects.cache
+C:\Users\P\Desktop\CleanCode1\TCP_Chat\Server\obj\Debug\Server.Properties.Resources.resources
+C:\Users\P\Desktop\CleanCode1\TCP_Chat\Server\obj\Debug\Server.Server.resources
+C:\Users\P\Desktop\CleanCode1\TCP_Chat\Server\obj\Debug\Server.csproj.GenerateResource.cache
+C:\Users\P\Desktop\CleanCode1\TCP_Chat\Server\obj\Debug\Server.csproj.CoreCompileInputs.cache
+C:\Users\P\Desktop\CleanCode1\TCP_Chat\Server\obj\Debug\Server.exe
+C:\Users\P\Desktop\CleanCode1\TCP_Chat\Server\obj\Debug\Server.pdb
